@@ -216,8 +216,38 @@ h6 {
 @media (max-width: 400px) {
   .wrapper .main .main__wrap span {
     font-size: 10px;
-    margin-left: 0;
+    margin-left: 0px;
   }
+}
+
+.wrapper .main .main__wrap .email__form {
+  width: 100%;
+  max-width: 500px;
+  margin-left: calc(50% - 250px);
+  padding: 10%;
+}
+
+.wrapper .main .main__wrap .email__form input {
+  width: 100%;
+  background-color: transparent;
+  text-transform: capitalize;
+  border-bottom: 1px solid #f0eaea;
+  text-align: center;
+  font-size: 25px;
+}
+
+.wrapper .main .main__wrap .email__form input::placeholder {
+  color: #e9dfdf;
+}
+
+.wrapper .main .main__wrap .email__form button {
+  width: 150px;
+  height: 40px;
+  margin-left: calc(50% - 75px);
+  margin-top: 10%;
+  background-color: #f375c9;
+  color: yellow;
+  box-shadow: 2px 2px 1px black;
 }
 
 .container {

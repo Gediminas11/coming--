@@ -63,6 +63,7 @@
                padding: 15px 0px;
                text-transform: uppercase;
                color: aquamarine;
+               
                .days{
                  width:100% ;
                  float: left;
@@ -103,12 +104,44 @@
                 text-align: center;
                 @media (max-width:$sm) {
                     font-size: $tiny;
-                    margin-left: 0;
+                    margin-left:0px;
                 }
            }
+             .email__form{
+               width: 100%;
+               max-width: 500px;
+               margin-left: calc(50% - 250px);
+               padding: 10%;
+               @media (max-width:$md) {
+                //    margin-top: 30px;
+                //    margin-left: 0;
+               }
+               input {
+                 width: 100%;
+                 background-color: transparent;
+                 text-transform: capitalize;
+                 border-bottom: 1px solid rgb(240, 234, 234);
+                 text-align: center; 
+                 font-size: $normal;
+                 &::placeholder{
+                     color: rgb(233, 223, 223);
+                 }
+               }
+               button{
+                   width: 150px;
+                   height: 40px;
+                   margin-left: calc(50% - 75px);
+                   margin-top: 10%;
+                   background-color: rgb(243, 117, 201);
+                   color: yellow;
+                   box-shadow: 2px 2px 1px black;
+               }
+             }
+
         }
-     }
- }
+
+    }
+}
 
 .container{
     width: 100%;
