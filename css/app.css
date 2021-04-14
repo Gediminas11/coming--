@@ -166,6 +166,12 @@ h6 {
   color: aquamarine;
 }
 
+@media (max-width: 400px) {
+  .wrapper .main .main__wrap .time {
+    margin-left: 0;
+  }
+}
+
 .wrapper .main .main__wrap .time .days {
   width: 100%;
   float: left;
@@ -198,7 +204,7 @@ h6 {
   text-align: center;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 760px) {
   .wrapper .main .main__wrap label {
     font-size: 35px;
     margin-left: 0;
@@ -224,7 +230,14 @@ h6 {
   width: 100%;
   max-width: 500px;
   margin-left: calc(50% - 250px);
-  padding: 10%;
+  padding-top: 100px;
+}
+
+@media (max-width: 400px) {
+  .wrapper .main .main__wrap .email__form {
+    margin-top: 30px;
+    margin-left: 0;
+  }
 }
 
 .wrapper .main .main__wrap .email__form input {
@@ -248,6 +261,127 @@ h6 {
   background-color: #f375c9;
   color: yellow;
   box-shadow: 2px 2px 1px black;
+}
+
+.wrapper .main .main__wrap .mouse {
+  margin-top: 50px;
+  width: 30px;
+  height: 50px;
+  border: 1px solid black;
+  margin-left: calc(50% - 15px);
+  border-radius: 20px;
+}
+
+.wrapper .section {
+  width: 100%;
+  height: 100%;
+  display: inline-flex;
+  justify-content: center;
+}
+
+.wrapper .section .section__wrapp {
+  display: inline-block;
+  width: 100%;
+  height: 40px;
+}
+
+.wrapper .section .section__wrapp .section__left {
+  width: 50%;
+  float: left;
+}
+
+@media (max-width: 920px) {
+  .wrapper .section .section__wrapp .section__left {
+    width: 100%;
+  }
+}
+
+.wrapper .section .section__wrapp .section__right {
+  width: 50%;
+  float: left;
+}
+
+@media (max-width: 920px) {
+  .wrapper .section .section__wrapp .section__right {
+    width: 100%;
+  }
+}
+
+.wrapper .section .section__wrapp .left__content,
+.wrapper .section .section__wrapp .right__content {
+  width: 94%;
+  margin-left: 3%;
+}
+
+.wrapper .section .section__wrapp .left__content h3,
+.wrapper .section .section__wrapp .right__content h3 {
+  width: 100%;
+  align-items: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 25px;
+  color: black;
+  text-transform: uppercase;
+  padding: 10px 0px;
+}
+
+.wrapper .section .section__wrapp .left__content p,
+.wrapper .section .section__wrapp .right__content p {
+  font-size: 18px;
+  line-height: 25px;
+  padding: 10px 0px;
+}
+
+.wrapper .section .section__wrapp .left__content p span,
+.wrapper .section .section__wrapp .right__content p span {
+  color: red;
+}
+
+.wrapper .section .section__wrapp .left__content .animation,
+.wrapper .section .section__wrapp .right__content .animation {
+  width: 100%;
+  height: 100%;
+  padding: 15px 0px;
+}
+
+.wrapper .section .section__wrapp .left__content .animation .bar__row,
+.wrapper .section .section__wrapp .right__content .animation .bar__row {
+  width: 100%;
+  height: 40px;
+  position: relative;
+}
+
+.wrapper .section .section__wrapp .left__content .animation .bar__row lebel,
+.wrapper .section .section__wrapp .right__content .animation .bar__row lebel {
+  width: 50%;
+  float: left;
+}
+
+.wrapper .section .section__wrapp .left__content .animation .bar__row span,
+.wrapper .section .section__wrapp .right__content .animation .bar__row span {
+  width: 50%;
+  float: right;
+  text-align: right;
+}
+
+.wrapper .section .section__wrapp .left__content .animation .bar__row .row__rap,
+.wrapper .section .section__wrapp .right__content .animation .bar__row .row__rap {
+  width: 100%;
+}
+
+.wrapper .section .section__wrapp .left__content .animation .bar__row .row__rap .line, .wrapper .section .section__wrapp .left__content .animation .bar__row .row__rap .active,
+.wrapper .section .section__wrapp .right__content .animation .bar__row .row__rap .line,
+.wrapper .section .section__wrapp .right__content .animation .bar__row .row__rap .active {
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  height: 4px;
+  background-color: #adadad;
+  border-radius: 10px;
+}
+
+.wrapper .section .section__wrapp .left__content .animation .bar__row .row__rap .active,
+.wrapper .section .section__wrapp .right__content .animation .bar__row .row__rap .active {
+  background-color: salmon;
 }
 
 .container {
