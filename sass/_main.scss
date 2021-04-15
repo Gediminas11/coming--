@@ -1,6 +1,37 @@
 .wrapper{
     width: 100%;
     height: 100%;
+     .heder{
+         position: fixed;
+         width: 100%;
+         height: 60px;
+         background-color: black;
+         padding: 15px;
+         z-index: 1;
+         display:flex;
+         justify-content: center;
+         .heder__wrapp{
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          .log{
+              width: 250px;
+              color: white;
+              font-size: $smal;
+          }
+         }
+         .nav{
+             width: 250px;
+             display: flex;
+             justify-content: space-between;
+             font-size: $smal;
+             a{
+                 width: 80px;
+                 color: white;
+             }
+         }
+     }
+   
     .main{
         width: 100%;
         height: 100%;
@@ -58,14 +89,18 @@
            }
            .time{
                width:100% ;
-               max-width: 500px;
-               margin-left: calc(50% - 250px);
+               max-width: 400px;
+               margin-left: calc(50% - 200px);
                padding: 15px 0px;
                text-transform: uppercase;
                color: aquamarine;
+               @media (max-width:$md) {
+
+                    
+               }
                @media (max-width:$sm) {
-                   
-                   margin-left: 0;
+                   margin-left: 0px;
+                     
                }
                
                .days{
@@ -113,12 +148,11 @@
            }
              .email__form{
                width: 100%;
-               max-width: 500px;
-               margin-left: calc(50% - 250px);
+               max-width: 400px;
+               margin-left: calc(50% - 200px);
                 padding-top: 100px;
-               @media (max-width:$sm) {
-                   margin-top: 30px;
-                   margin-left: 0;
+               @media (max-width:$md) {
+                  
                    
                }
                input {
@@ -146,32 +180,60 @@
                  margin-top: 50px;
                  width: 30px;
                  height: 50px;
-                 border:1px solid black;
+                 border:3px solid rgb(245, 243, 250);
                  margin-left: calc(50% - 15px);
                  border-radius: 20px;
-                 @media (max-width:$md) {
-                     
+                 .wheel{
+                     width: 4px;
+                     height: 16px;
+                     border:1px solid rgb(2, 255, 2);
+                     margin-left: calc(50% - 2px);
+                     background-color:aliceblue ;
+                     animation-name: wheel;
+                     animation-duration: 1s;
+                     animation-delay: 2s;
+                     animation-iteration-count:infinite ;
+                     animation-timing-function: ease-out;
                  }
+
              }
+             @keyframes wheel {
+                 0% {margin-top: 0; }
+                100% {margin-top: 20px; } 
+              }    
+               
+                  
+                
+           
 
         }
 
     }
     .section{
         width: 100%;
-        height: 100%;
+        height: 500px;
         display: inline-flex;
         justify-content: center;
         .section__wrapp{
             display:inline-block;
             width:100% ;
             height: 40px;
+            padding: 50px 0px;
+            @media (max-width:$xl) {
+                margin-top: 0;
+                padding: 0;
+            }
+            @media (max-width:$md) {
+                padding-top: 0;
+            
+            }
             .section__left{
              width: 50%;
              float: left;
             //  height: 200px;
              @media (max-width:$xl) {
                  width: 100%;
+                 margin-top: 0;
              }
             }
             .section__right{
@@ -180,12 +242,17 @@
              float:left;
              @media (max-width:$xl) {
                 width: 100%;
+                margin-top: 0;
             }
             }
             .left__content,
             .right__content {
                 width: 94%;
                 margin-left: 3%;
+                @media (max-width:$xl) {
+                    margin-top: 0;
+                    
+                }
 
                 h3{
                  width: 100%;
@@ -195,19 +262,88 @@
                  color:black;
                  text-transform: uppercase;
                  padding: 10px 0px;
+                 @media (max-width:$xl) {
+                    font-size: $smal;
+                 }
                 }
                 p{
                     font-size: $smal;
                     line-height: 25px;
                     padding: 10px 0px;
+                    @media (max-width:$xl) {
+                        font-size: $tiny;
+                     }
                     span{
                         color:red
                     }
                 }
+                form{
+                    width: 100%;
+                    margin-top: 82px;
+                    @media (max-width:$xl) {
+                        margin-top: 0;
+                    }
+                    @media (max-width:$md) {
+                        margin-top: 0;
+                    }
+                    .name{
+                      width: 49%; 
+                      float: left; 
+                      border-bottom: 1px solid grey; 
+                      color: grey;   
+                      @media (max-width:$xl) {
+                        margin-top: 0;
+                    }            
+                    }
+                    .email{
+                      width: 49%;
+                      float: right;
+                      border-bottom: 1px solid grey; 
+                      color: grey; 
+                      @media (max-width:$xl) {
+                        margin-top: 0;
+                    }
+                    }
+
+                    .textarea{
+                        margin-top: 15px;
+                        width: 100%;
+                        color: grey;
+                        border-bottom: 1px solid grey;
+                        padding-top: 20px;
+                        resize: none;
+                        @media (max-width:$xl) {
+                            margin-top: 0;
+                        }
+                        @media (max-width:$md) {
+                            margin-top: 0;
+                        }
+
+                    }
+                    button{
+                        margin-top: 30px;
+                        width: 120px;
+                         height: 30px;
+                        float: right;
+                        background-color: rgb(243, 117, 201);
+                        color: yellow;
+                        @media (max-width:$md) {
+                            margin-top: 0;
+                        }
+                    }
+                }
                 .animation{
+                    margin-top: 30px;
                     width: 100%;
                     height: 100%;
                     padding: 15px 0px;
+                    @media (max-width:$xl) {
+                        margin-top: 0;
+                        
+                    }
+                    @media (max-width:$md) {
+                        margin-top: 0;
+                    }
                     .bar__row{
                         width: 100%;
                         height: 40px;
@@ -235,7 +371,21 @@
                            .active{
                             @extend .line; 
                             background-color: salmon;
+                            animation-name: bars;
+                            animation-duration: 10s;
+                             animation-delay: 2s;
+                             animation-iteration-count:infinite ;
+                             animation-timing-function: ease-out;
                            }
+                        }
+                        @keyframes bars {
+                           0%{
+                               width: 0;
+                               background-color: rgb(2, 255, 2);
+                           }
+
+                            100% {background-color: rgb(2, 255, 2);}
+                            
                         }
                     }
                 }
@@ -247,9 +397,88 @@
 
 
     }
+    .footer{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 250px;
+        background-color: seagreen;
+        .footer__wrapp{
+            width: 100%;
+            .siocal{
+                width: 100%;
+                height: 40px;
+                text-align: center;
+                padding: 10px 0px;
+                .fa{
+                    width: 25px;
+                    height: 25px;
+                    padding: 7px;
+                    cursor: pointer;
+                    &:hover{
+                        background-color: cornsilk;
+                        border-radius: 15px;
+                        color: crimson;
+                        @media (max-width:$md) {
+                            pointer-events: none;
+                        }
+                    }
+                }
+            }
+            hr{
+                width: 100%;
+                border-bottom: 2px solid black;
+            }
+        }
+        .arrow{
+            position: absolute;
+            top: -20px;
+            right: 0;
+            width:50px;
+            height: 50px;
+            border:1px solid black;
+            border-radius: 25px;
+            background-color:rgb(243, 117, 201);
+            float: left; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            a{
+             font-size: $medium;            
+             border-radius: 15px;
+             color: cornsilk;
+            }
+        }
+        .logo{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            img{
+                width: 80px;
+                height: 80px;
+            }
+            label{
+                font-size: $medium;
+                padding-top: 12px;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                color: rgb(219, 137, 42);
+            }
+        }
+        .about{
+            width: 100%;
+            text-align: center;
+            font-size: $smal;
+            color: rgb(37, 196, 16);
+            span{
+                color: rgb(235, 137, 10);
+            }
+        }
+
+    }
 } 
 
 .container{
+    position: relative;
     width: 100%;
     max-width: 1200px;
     height: 100%;
